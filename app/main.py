@@ -4,6 +4,7 @@ from flask_cors import CORS
 from app.routes.sentimental_routes import sentimental_blueprint
 from app.routes.screenstats_routes import screenstats_blueprint
 from app.routes.voice_recognition_routes import voice_bp
+from app.routes.thinking_route import thinking_blueprint
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads'
@@ -12,6 +13,7 @@ app.config['UPLOAD_FOLDER'] = 'uploads'
 app.register_blueprint(sentimental_blueprint, url_prefix="/sentiment")
 app.register_blueprint(screenstats_blueprint, url_prefix="/screenstats")
 app.register_blueprint(voice_bp, url_prefix="/api/voice")
+app.register_blueprint(thinking_blueprint, url_prefix="/thinking")
 
 # Enable CORS
 CORS(app)
