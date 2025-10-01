@@ -17,6 +17,16 @@ app.register_blueprint(voice_bp, url_prefix="/api/voice")
 CORS(app)
 
 @app.route('/')
+# """
+# Route:
+#     '/'
+
+# Description:
+#     This route serves as the index or home page of the API. It returns a welcome message to the user.
+
+# Returns:
+#     str: A welcome message indicating the purpose of the API.
+# """
 def index():
     return "Welcome to the AI Services API!"
 
